@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@font-face {
+  font-family: TheSans;
+  src: url('./assets/fonts/TheSans.otf') format('opentype');
+}
+html {
+  overflow-x: hidden;
+}
+body {
+  @apply bg-secondary;
+  font-family: 'TheSans', sans-serif;
+}
+.table tbody tr {
+  border: none;
+}
+@layer components {
+  .align-element {
+    @apply max-w-7xl mx-auto px-5 sm:px-10;
+  }
+  .align-element-login {
+    @apply max-w-6xl mx-auto px-4 sm:px-8;
+  }
+}
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #9a9a9a;
+  border-radius: 32px;
+  min-height: 100px;
+}
+/*  dropwdonw */
+@media (min-width: 381px) {
+  .navbar .dropdown .dropdown-content {
+    left: 50%;
+    transform: translateX(-50%) !important;
+  }
+}
